@@ -31,4 +31,15 @@ public class TabsAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 2;
     }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+
+        switch (position){
+            case 0: return "Split Bill";
+            case 1: return "About";
+
+        }
+        return "tab is er niet";
+    }
 }
