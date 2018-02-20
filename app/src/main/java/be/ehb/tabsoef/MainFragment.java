@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -30,7 +32,35 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_main,container,false);
+
+        View rootView = inflater.inflate(R.layout.fragment_main,container,false);
+
+        final EditText etTotal = rootView.findViewById(R.id.et_main_total);
+        EditText etTip = rootView.findViewById(R.id.et_main_tip);
+        final EditText etPerson = rootView.findViewById(R.id.et_main_persons);
+
+        Button btnSplitBill = rootView.findViewById(R.id.btn_split_bill);
+
+        final TextView tvResult = rootView.findViewById(R.id.tv_main_result);
+
+
+        btnSplitBill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String total = etTotal.getText().toString();
+                String person = etPerson.getText().toString();
+
+                float totalToFloat = Float.valueOf(total);
+                float personToInt = Integer.valueOf(person);
+
+                tvResult.setText("" + totalToFloat / personToInt);
+
+
+            }
+        });
+
+
+        return rootView;
 
     }
 
