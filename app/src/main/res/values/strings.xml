@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TabsOef</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_tv_main_total">Total</string>
+    <string name="txt_tv_main_tip">Tip</string>
+    <string name="txt_main_persons">Persons</string>
+    <string name="txt_btn_main_split_bill">Split bill</string>
+</resources>
